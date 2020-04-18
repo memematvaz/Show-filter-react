@@ -1,0 +1,13 @@
+@mixin tittle-page {
+  font-size: 24px;
+  font-family: $primary-font;
+  color: black;
+}
+
+@mixin tittle-aside {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: $secondary-font;
+  color: black;
+  text-align: center;
+}
