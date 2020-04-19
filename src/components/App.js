@@ -5,16 +5,23 @@ import ShowList from './ShowList';
 import ShowDetails from './ShowDetails';
 import FilterCheckbox from './FilterCheckbox';
 import FilterInput from './FilterInput';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.handleCheckbox = this.handleCheckbox.bind(this);
+    this.renderShowDetails = this.renderShowDetails.bind(this)
+    this.handleInput = this.handleInput.bind(this)
+    this.handleCheckbox = this.handleCheckbox.bind(this)
     this.renderShowDetails = this.renderShowDetails.bind(this);
-    this.state={
-      data:[]
+    this.state = {
+      data: [],
+      inputValue: '',
+      checkValue: '',
+      isChecked: false
     }
   }
+
 
   componentDidMount(){
     fetchShows()
@@ -23,6 +30,7 @@ class App extends React.Component {
           data:data
         })
       })
+  
   }
 
   handleCheckbox() {
@@ -33,27 +41,47 @@ class App extends React.Component {
     })
   }
 
-/*
 
-  renderShowDetails(props){
+  handleInput(currentTargetValue) {
+    this.setState({ inputValue: currentTargetValue })
+  }
+
+   renderShowDetails(props){
     console.log(props)
     const urlId = props.match.params.id;
-    const shows = this.state.data;
-    for(let showObject of shows) {
-      if(showObject.id === parseInt(urlId)) {
-        return <ShowDetails show={showObject}/>
+    const dataCardShow = this.state.data;
+    for(let cardShow of dataCardShow) {
+      if(cardShow.show.id === parseInt(urlId)) {
+        return <ShowDetails shows={cardShow}/>
       }
     }
   }
-*/
 
   render() {
+    const {data,isRunning} = this.state;
     return (
-      <div className="App">
-       
+      <div className="App wrapper">
+        <Switch>
+          <Route exact path="/">
+            <div className="header">
+               <h1 className="header-title">Series</h1>
+            </div>
+             <FilterInput handleInput={this.handleInput}
+                          value={this.state.inputValue}/>
+             <FilterCheckbox handleCheckbox={this.handleCheckbox} 
+                             isRunning={isRunning}/>
+             <ShowList isRunning={isRunning} 
+                       dataList={this.state.data}
+                       search={this.state.search}
+                       isRunning={this.state.isRunning} />
+            }
+          </Route>
+          <Route path="/cardShow/:id" render={this.renderShowDetails}/>
+        </Switch>
+
       </div>
-    );
-  }
+  );
+}
 }
 
 export default App;

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const FilterCheckbox = (props) => {
 
   const updateCheckbox = () => {
@@ -7,8 +8,8 @@ const FilterCheckbox = (props) => {
   }
 
   return (
-    <form className="filterCheckbox">
-      <label htmlFor="status-running">Running:</label>
+    <form className="form">
+      <label htmlFor="label-checkbox">Running:</label>
       <input onChange={updateCheckbox} type="checkbox" id="status-running" name="status-running" value="status-running" checked={props.isRunning}/>
     </form>
 
@@ -16,3 +17,7 @@ const FilterCheckbox = (props) => {
 }
 
 export default FilterCheckbox;
+
+
+
+
