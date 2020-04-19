@@ -1,18 +1,25 @@
 import React from 'react';
 
-/*const ShowDetails = (props) => {
+const ShowDetails = (props) => {
   return (
-    <ul className="showCard">
+    <div className="showCard">
       <li className="show" id={props.show.id}>
-        <div className="pokemon-image">
-          <img src={props.pokemon.url} alt={props.pokemon.name}/>
+        <div className="show-image">
+          <img src={props.show.image.medium} alt={props.show.name}/>
         </div>
-        <div className="pokemon-name">
-          <h2>{props.pokemon.name}</h2>
+        <div className="showCard-title">
+          <h2>{props.show.name}</h2>
+          <p>{props.show.rating.average}</p>
+          <div>{props.show.summary}</div>
+          <ul className="genres">
+            {props.show.genres.map((genres,index) => (
+              <li key={index}>{genres}</li>
+            ))}
+          </ul>
         </div>
       </li>
-    </ul>
+    </div>
   );
 }
 
-export default ShowDetails;*/
+export default ShowDetails;
