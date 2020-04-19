@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Show(props) {
+const Show = (props) => {
   return (
     <div className="showCard">
       <li className="show" id={props.show.id}>
@@ -12,6 +12,7 @@ function Show(props) {
             <h2>{props.show.name}</h2>
             <p>{props.show.rating.average}</p>
             <p>{props.show.status}</p>
+            <p>Más información</p>
           </div>
       </li>
     </div>
@@ -19,4 +20,3 @@ function Show(props) {
 }
 
 export default Show;
-

@@ -58,7 +58,7 @@ class App extends React.Component {
   }
 
   render() {
-    const {data,isRunning} = this.state;
+    const {isRunning} = this.state;
     return (
       <div className="App wrapper">
         <Switch>
@@ -70,10 +70,10 @@ class App extends React.Component {
                           value={this.state.inputValue}/>
              <FilterCheckbox handleCheckbox={this.handleCheckbox} 
                              isRunning={isRunning}/>
-             <ShowList isRunning={isRunning} 
+             <ShowList isRunning={this.state.isRunning} 
                        dataList={this.state.data}
                        search={this.state.search}
-                       isRunning={this.state.isRunning} />
+                        />
             }
           </Route>
           <Route path="/cardShow/:id" render={this.renderShowDetails}/>

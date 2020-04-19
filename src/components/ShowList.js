@@ -3,12 +3,13 @@ import Show from './Show';
 import { Link } from 'react-router-dom';
 
 
+
 const ShowList = (props) => {
- // const {dataList,isEvolution} = props
- const {isRunning} = props
+  const {dataList,isRunning} = props
   return (
       <ul className="showList">
-        {props.dataList
+        {dataList
+        .filter(showObject => showObject.show.name.toLowerCase().includes((props.inputValue.toLowercase())))
         .filter(showObject => !isRunning || (isRunning && showObject.show.status === 'Running'))
         .map(showObject =>
            <Link to={`/show/${showObject.show.id}`}>
@@ -25,6 +26,5 @@ const ShowList = (props) => {
       </ul>
     );
   }
-
-
-  export default ShowList;
+ 
+export default ShowList; 
