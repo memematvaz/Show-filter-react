@@ -11,36 +11,30 @@
   background-color: $color-background;
   color: $color-font-section;
   font-family: $secondary-font;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 3px;
-  box-shadow: 2px 3px 8px 0px #878787;
-  transition: transform 250ms ease, box-shadow 250ms ease;
   position: relative;
+  margin: 3px;
+
   overflow: hidden;
-
-
+  box-shadow: 2px 3px 8px 0px #878787;
 
   .showCard-title {
     text-align: center;
     padding-bottom: 10px;
+    display: block;
+    opacity: 0;
+    display:none;
+    position: absolute;
   }
 }
 
-
 .showCard:hover {
-  size: 105%;
-}
+  transition: transform 250ms ease, box-shadow 250ms ease;
 
+  .showCard-title {
+    opacity: 100;
+    display: block;
+    
 
-.showCard-favourite {
-  background-color: $color-background-favourite;
-  color: $color-font-favourite;
-  font-family: $secondary-font;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 3px;
+  }
 
 }

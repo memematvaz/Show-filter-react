@@ -12,7 +12,7 @@ const Show = (props) => {
             <h2>{props.title}</h2>
             <p>{props.showAverage}</p>
             <p>{props.showStatus}</p>
-            <p>Más información</p>
+            <p>+ info</p>
           </div>
       </li>
     </div>
