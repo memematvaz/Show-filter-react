@@ -10,7 +10,7 @@ const ShowDetails = (props) => {
         <div className="showCard-title">
           <h2>{props.shows.name}</h2>
           <p>{props.shows.rating.average}</p>
-          <div>{props.shows.summary}</div>
+          <div dangerouslySetInnerHTML={{ __html: props.shows.summary }} />
           <ul className="genres">
             {props.shows.genres.map((genres,index) => (
               <li key={index}>{genres}</li>

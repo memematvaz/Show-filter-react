@@ -1,0 +1,47 @@
+.aside {
+    display: block;
+  
+  
+    .form {
+      text-align: center;
+      
+      .search-text {
+        padding: 10px;
+        
+        font-family: $primary-font;
+        font-size: 20px;
+        color: white;
+      }
+    
+      .search-input {
+        padding: 10px;
+    
+        border: white;
+    
+        border-radius: 30px;
+        
+        font-family: $secondary-font;
+        font-size: 12px;
+      }
+
+      .checkbox-input {
+        font-family: $secondary-font;
+        font-size: 12px;
+        background-color: $color-background-favourite;
+        color: $color-font-favourite;
+        padding: 10px;
+        border: 5px;
+        border-color: $color-background-favourite;
+      }
+    
+    
+    }
+}
+  
+  @media (min-width: 768px) {
+    .aside {
+      max-width: 500px;
+      min-width: 300px;
+    }
+  }
+  

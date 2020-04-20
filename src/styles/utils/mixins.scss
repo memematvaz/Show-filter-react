@@ -1,7 +1,9 @@
 @mixin tittle-page {
-  font-size: 24px;
+  font-size: 50px;
   font-family: $primary-font;
-  color: black;
+  color: white;
+  text-transform: uppercase;
+
 }
 
 @mixin tittle-aside {

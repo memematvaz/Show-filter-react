@@ -1,47 +1,19 @@
 .header {
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
 
   .header-title {
     @include tittle-page;
     ;
   }
-  
-  .form {
-    text-align: center;
 
-    .search-input {
-      padding: 10px;
-
-      border-top: $color-background;
-      border-left: $color-background;
-      border-right: $color-background;
-      border-bottom: solid 1px $color-background-favourite;
-      ;
-
-      font-family: $secondary-font;
-      font-size: 12px;
-    }
-
-    .checkbox-input {
-      font-family: $secondary-font;
-      font-size: 12px;
-      background-color: $color-background-favourite;
-      color: $color-font-favourite;
-      padding: 10px;
-      border: 5px;
-      border-color: $color-background-favourite;
-    }
-
-    & .search-button {
-      font-family: $secondary-font;
-      font-size: 12px;
-      background-color: $color-background-favourite;
-      color: $color-font-favourite;
-      padding: 10px;
-      border: 5px;
-      border-color: $color-background-favourite;
-      width: 80px;
-    }
+  .fas {
+    display: block;
+    font-size: 50px;
+    color: white;
+    margin-top: 40px;
   }
 }
+
+
+

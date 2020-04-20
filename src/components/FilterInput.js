@@ -7,12 +7,15 @@ const FilterInput = (props) => {
   }
 
   return (
-    <form className="for,">
-      <label htmlFor="search-input">Search:</label>
+    <form className="form">
+      <label className="search-text" htmlFor="search-input"><i class="fas fa-search"></i>
+
+</label>
       <input  type="text"
               value={props.inputValue}
               onChange={updateInput}
-              placeholder="Search"         
+              placeholder="Search series..."
+              className="search-input"        
               />
 
     </form>

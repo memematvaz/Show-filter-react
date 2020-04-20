@@ -62,18 +62,23 @@ class App extends React.Component {
       <div className="App wrapper">
         <Switch>
           <Route exact path="/">
-            <div className="header">
-               <h1 className="header-title">Series</h1>
+            <div className="header container">
+               <i class="fas fa-tv"></i>
+               <h1 className="header-title">Series Finder</h1>
             </div>
-             <FilterInput handleInput={this.handleInput}
+            <div className="container-aside-main">
+              <div className="aside container">
+                <FilterInput handleInput={this.handleInput}
                           inputValue={this.state.inputValue}/>
-             <FilterCheckbox handleCheckbox={this.handleCheckbox} 
+                <FilterCheckbox handleCheckbox={this.handleCheckbox} 
                              isRunning={isRunning}/>
+              </div>
              <ShowList isRunning={this.state.isRunning} 
                        data={this.state.data}
                        handleInput={this.handleInput}
                        inputValue={this.state.inputValue}
                         />
+              </div>
             }
           </Route>
           <Route path="/cardShow/:id" render={this.renderShowDetails}/>
