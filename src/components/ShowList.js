@@ -2,29 +2,36 @@ import React from 'react';
 import Show from './Show';
 import { Link } from 'react-router-dom';
 
-
-
 const ShowList = (props) => {
-  const {dataList,isRunning} = props
+
+  const {isRunning} = props
+  console.log(props)
   return (
+     
       <ul className="showList">
-        {dataList
-        .filter(showObject => showObject.show.name.toLowerCase().includes((props.inputValue.toLowercase())))
-        .filter(showObject => !isRunning || (isRunning && showObject.show.status === 'Running'))
+        {props.data
+      .filter(showObject => showObject.name.toLowerCase().includes((props.inputValue.toLowerCase())))
+        .filter(showObject => !isRunning || (isRunning && showObject.status === 'Running'))
         .map(showObject =>
-           <Link to={`/show/${showObject.show.id}`}>
+           <Link to={`/show/${showObject.id}`}>
               <Show 
-               key = {showObject.show.id}
-               image = {showObject.show.image.medium}
+               key = {showObject.id}
+               image = {showObject.image.medium}
                title = {showObject.name}
                showAverage = {showObject.rating.average}
                showStatus = {showObject.status}
+               id = {showObject.id}
         
               />
            </Link>
             )} 
       </ul>
     );
+  
   }
  
 export default ShowList; 
+
+
+
+

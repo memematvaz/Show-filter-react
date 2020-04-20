@@ -10,7 +10,12 @@ const FilterCheckbox = (props) => {
   return (
     <form className="form">
       <label htmlFor="label-checkbox">Running:</label>
-      <input onChange={updateCheckbox} type="checkbox" id="status-running" name="status-running" value="status-running" checked={props.isRunning}/>
+      <input onChange={updateCheckbox} 
+             type="checkbox" 
+             id="status-running" 
+             name="status-running" 
+             value="status-running" 
+             checked={props.isRunning}/>
     </form>
 
   )

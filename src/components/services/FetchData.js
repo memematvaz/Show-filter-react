@@ -1,4 +1,4 @@
-const ENDPOINT = 'http://api.tvmaze.com/search/shows' //+ searchInput.value;
+const ENDPOINT = 'http://api.tvmaze.com/shows' 
 
 const fetchShows = () => fetch(ENDPOINT).then(response => response.json());
 

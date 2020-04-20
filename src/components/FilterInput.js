@@ -10,12 +10,11 @@ const FilterInput = (props) => {
     <form className="for,">
       <label htmlFor="search-input">Search:</label>
       <input  type="text"
-              value={props.value}
+              value={props.inputValue}
               onChange={updateInput}
-              inputType="text"
-              placeHolder="Search"         
+              placeholder="Search"         
               />
-      <button type="button" className="search-button">  <i class="fa fa-search"></i> Search:</button>
+
     </form>
 
   )

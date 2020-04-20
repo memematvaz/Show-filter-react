@@ -17,8 +17,7 @@ class App extends React.Component {
     this.state = {
       data: [],
       inputValue: '',
-      checkValue: '',
-      isChecked: false
+      isRunning: false
     }
   }
 
@@ -67,12 +66,13 @@ class App extends React.Component {
                <h1 className="header-title">Series</h1>
             </div>
              <FilterInput handleInput={this.handleInput}
-                          value={this.state.inputValue}/>
+                          inputValue={this.state.inputValue}/>
              <FilterCheckbox handleCheckbox={this.handleCheckbox} 
                              isRunning={isRunning}/>
              <ShowList isRunning={this.state.isRunning} 
-                       dataList={this.state.data}
-                       search={this.state.search}
+                       data={this.state.data}
+                       handleInput={this.handleInput}
+                       inputValue={this.state.inputValue}
                         />
             }
           </Route>
