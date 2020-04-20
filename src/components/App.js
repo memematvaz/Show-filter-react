@@ -50,7 +50,7 @@ class App extends React.Component {
     const urlId = props.match.params.id;
     const dataCardShow = this.state.data;
     for(let cardShow of dataCardShow) {
-      if(cardShow.show.id === parseInt(urlId)) {
+      if(cardShow.id === parseInt(urlId)) {
         return <ShowDetails shows={cardShow}/>
       }
     }

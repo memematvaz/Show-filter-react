@@ -3,7 +3,7 @@ import React from 'react';
 const Show = (props) => {
   return (
     <div className="showCard">
-      <li className="show" id={props.id}>
+      <li className="show" id={props.ShowId}>
         <div className="show-image">
           <img src={props.image} alt={props.title}></img>
         </div>

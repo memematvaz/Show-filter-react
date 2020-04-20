@@ -3,16 +3,16 @@ import React from 'react';
 const ShowDetails = (props) => {
   return (
     <div className="showCard">
-      <li className="show" id={props.show.show.id}>
+      <li className="show" id={props.shows.id}>
         <div className="show-image">
-          <img src={props.show.show.image.medium} alt={props.show.name}/>
+          <img src={props.shows.image.medium} alt={props.shows.name}/>
         </div>
         <div className="showCard-title">
-          <h2>{props.show.name}</h2>
-          <p>{props.show.rating.average}</p>
-          <div>{props.show.summary}</div>
+          <h2>{props.shows.name}</h2>
+          <p>{props.shows.rating.average}</p>
+          <div>{props.shows.summary}</div>
           <ul className="genres">
-            {props.show.show.genres.map((genres,index) => (
+            {props.shows.genres.map((genres,index) => (
               <li key={index}>{genres}</li>
             ))}
           </ul>
@@ -23,4 +23,3 @@ const ShowDetails = (props) => {
 }
 
 export default ShowDetails;
-

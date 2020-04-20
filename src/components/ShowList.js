@@ -13,15 +13,14 @@ const ShowList = (props) => {
       .filter(showObject => showObject.name.toLowerCase().includes((props.inputValue.toLowerCase())))
         .filter(showObject => !isRunning || (isRunning && showObject.status === 'Running'))
         .map(showObject =>
-           <Link to={`/show/${showObject.id}`}>
-              <Show 
+           <Link key={showObject.name}    to={`/cardShow/${showObject.id}`}>
+             <Show 
                key = {showObject.id}
                image = {showObject.image.medium}
                title = {showObject.name}
                showAverage = {showObject.rating.average}
-               showStatus = {showObject.status}
-               id = {showObject.id}
-        
+               showStatus = {showObject.status}   
+                         
               />
            </Link>
             )} 
