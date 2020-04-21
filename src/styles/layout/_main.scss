@@ -12,9 +12,6 @@
   color: $color-font-section;
   font-family: $secondary-font;
   background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
   perspective: 1000px;
 
 
@@ -41,6 +38,10 @@
 
 .showCard:hover .show {
   transform: rotateY(180deg);
+
+  .showCard-title {
+    display: block
+  }
 }
 
 .showCard-image,
@@ -48,30 +49,5 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0;
-}
 
-
-.showCard:hover .show {
-  transform: rotateY(180deg);
-}
-
-.showCard-image,
-.showCard-title {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 100;
-}
-/* Style the front side (fallback if image is missing) */
-.showCard-image {
-  background-color: #bbb;
-  color: black;
-}
-/* Style the back side */
-.showCard-title {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-  
 }
