@@ -1,68 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Serie Filter
+Esta aplicación se sirve de la API http://www.tvmaze.com/api para elaborar un catálogo de series de televisión en el que encontrar tus series favoritas mediante un buscador y obtener más información sobre ests. Tambin puedes filtrar los resultados según el estado de emisión en el que se encuentre la serie.
 
-## Available Scripts
+##Cómo lo he creado:
+Utilizando React (JavaScript) y Sass. Siguiendo adems las indicaciones de diseño propuestas por Mobile First (¡sí! se trata de una App responsive).
 
-In the project directory, you can run:
+##Descárgate el repositorio:
+Si quieres clonar el repositorio, tendrás que instalar Node.js, instala las dependencias locales con npm install y ejecútalas con npm start.
 
-### `npm start`
+También puedes ver y usar la aplicación clickando en el enlace junto al título.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##Cómo funciona:
+La aplicación cuenta con un buscador en el que puedes escribir el nombre de las series que desees encontrar y automticamente filtrará los resultados coincidentes. También cuenta con un checkbox que al seleccionarlo haces que solo aparezcan las series que en la actualidad siguen en emisión. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Al colocar el cursor encima de las diferentes tarjetas con las imágenes de las series hará una divertida animación. Al clickar sobre ellas podrs acceder a un resumen de su contenido.
+que abras el generador de tarjetas, toda tu información personal reaparecerá y solo tendrás que modificar el campo que te interese. Y, si deseas eliminarla, bastará con pulsar el botón 'Reset' para que esta se borre de la tarjeta y del local storage.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Comparte loudspeaker:
+¿Ya has rellenado todos tus datos? ¡A qué esperas para compartir! Pincha sobre el botón 'Crear tarjeta', recibe el link de tu tarjeta personalizada y compártela fácilmente y de forma inmediata a través de tu perfil de Twitter. De nada sunglasses.
