@@ -11,30 +11,44 @@
   background-color: $color-background;
   color: $color-font-section;
   font-family: $secondary-font;
-  position: relative;
-  margin: 3px;
+  background-color: transparent;
+  perspective: 1000px;
+  max-width: 300px;
 
-  overflow: hidden;
-  box-shadow: 2px 3px 8px 0px #878787;
 
-  .showCard-title {
+  .show {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    padding-bottom: 10px;
-    display: block;
-    opacity: 0;
-    display:none;
-    position: absolute;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+    .showCard-title {
+      text-align: center;
+      padding-bottom: 10px;
+      display: block;
+      opacity: 0;
+      display: none;
+      position: absolute;
+    }
   }
 }
 
-.showCard:hover {
-  transition: transform 250ms ease, box-shadow 250ms ease;
+
+.showCard:hover .show {
+  transform: rotateY(180deg);
 
   .showCard-title {
-    opacity: 100;
-    display: block;
-    
-
+    display: block
   }
+}
+
+.showCard-image,
+.showCard-title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 
 }

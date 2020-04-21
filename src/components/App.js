@@ -61,6 +61,7 @@ class App extends React.Component {
     return (
       <div className="App wrapper">
         <Switch>
+          
           <Route exact path="/">
             <div className="header container">
                <i class="fas fa-tv"></i>
@@ -80,11 +81,14 @@ class App extends React.Component {
                         />
               </div>
             }
+           
           </Route>
+         
           <Route path="/cardShow/:id" render={this.renderShowDetails}/>
+    
         </Switch>
-
-      </div>
+        </div>
+   
   );
 }
 }
